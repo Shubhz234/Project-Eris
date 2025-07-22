@@ -141,7 +141,7 @@ img.img-polaroid {
 }
 .topbar p > i{
 	margin-right:5px;
-	color: #00bcd4;
+	color: #ff8800;
 }
 .topbar p:last-child{
 	text-align:right;
@@ -165,7 +165,7 @@ header .navbar {
     padding: 0 0 0 15px;
 }
 .navbar-default .navbar-brand{
-color: #1891EC;
+color: #ff8800;
 }
 
 header .navbar-collapse  ul.navbar-nav {
@@ -234,7 +234,7 @@ header  .navbar-nav > li > a {
 
 .dropdown-menu li a:hover {
     color: #fff !important;
-    background: #00bcd4 !important;
+    background: #ff8800 !important;
 }
 
 header .nav .caret {
@@ -814,8 +814,8 @@ form#commentform textarea {
 
 .about-text .btn {
 	margin-top: 20px;
-	//font-size: 15px;
-	//text-align: justify;
+	font-size: 15px;
+	text-align: justify;
 }
 
 .about-image img {
@@ -875,7 +875,7 @@ form#commentform textarea {
 }
 
 #call-to-action-2 {
-	background-color: #0bcce4;
+	background-color: #e67a00;
 	padding: 50px 0;
 }
 #call-to-action-2 h3 {
@@ -985,7 +985,7 @@ blockquote cite a:visited 				{ color:#555; }
 }
 
 /* --- button --- */
-.btn{text-align: center;color: #ffffff;padding: 12px 25px;border-radius: 0;background: #00bcd4;border-color: #00bcd4;}
+.btn{text-align: center;color: #ffffff;padding: 12px 25px;border-radius: 0;background: #ff8800;border-color: #ff8800;}
 .btn-theme {
 	color: #fff;
 	background: transparent;
@@ -1020,7 +1020,7 @@ footer ul.link-list li a{
 	color: rgba(255, 255, 255, 0.63);
 }
 footer ul.link-list li a:hover {
-	color: #00bcd4;
+	color: #ff8800;
 }
 /* --- Heading style --- */
 
@@ -1404,11 +1404,11 @@ footer a {
 }
 
 footer a:hover {
-	color: #00bcd4;
+	color: #ff8800;
 }
 
 footer h1, footer h2, footer h3, footer h4, footer h5, footer h6{
-	color: #00bcd4;
+	color: #ff8800;
 }
 
 footer address {
@@ -1473,7 +1473,7 @@ ul.social-network li {
     height:32px;
     bottom:0px;
     right:20px;
-    background: #00bcd4;
+    background: #ff8800;
 }
 
 a.scrollup {
@@ -1601,8 +1601,8 @@ article img.pull-right, article .align-right{
 .btn:hover, .btn:focus {
   color: #ffffff;
   text-decoration: none;
-  background: #049aac;
-  border-color: #00bcd4;
+  background: #e67a00;
+  border-color: #ff8800;
 }
 /*  Media queries 
 ============================= */
@@ -1803,7 +1803,7 @@ padding-top: 3px;
 
 }
 
- /*mg booking*/
+/*mg booking*/
 /* .mg-booking-form .nav-tabs > li {
   width: 25%;
   text-align: center;
