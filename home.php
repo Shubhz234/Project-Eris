@@ -1,51 +1,40 @@
-  <section id="banner">
-   
-  <!-- Slider -->
-        <div id="main-slider" class="flexslider">
-            <ul class="slides">
-              <li>
-                <img src="<?php echo web_root; ?>plugins/home-plugins/img/slides/1.jpg" alt="" />
-                <div class="flex-caption">
-                    <h3>innovation</h3> 
-          <p>We create the opportunities</p> 
-           
-                </div>
-              </li>
-              <li>
-                <img src="<?php echo web_root; ?>plugins/home-plugins/img/slides/2.jpg" alt="" />
-                <div class="flex-caption">
-                    <h3>Specialize</h3> 
-          <p>Success depends on work</p> 
-           
-                </div>
-              </li>
-            </ul>
+<section id="banner">
+  <div id="main-slider" class="flexslider">
+    <ul class="slides">
+      <li>
+        <img src="<?php echo web_root; ?>plugins/home-plugins/img/slides/1.jpg" alt="" />
+        <div class="flex-caption">
+          <h3 class="animated fadeInDown">Innovation</h3> 
+          <p class="animated fadeInUp">We create the opportunities</p> 
         </div>
-  <!-- end slider -->
- 
-  </section> 
-  <section id="call-to-action-2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-sm-9">
-          <h3>Partner with Business Leaders</h3>
-          <p>Development of successful, long term, strategic relationships between customers and suppliers, based on achieving best practice and sustainable competitive advantage. In the business partner model, HR professionals work closely with business leaders and line managers to achieve shared organisational objectives.</p>
+      </li>
+      <li>
+        <img src="<?php echo web_root; ?>plugins/home-plugins/img/slides/2.jpg" alt="" />
+        <div class="flex-caption">
+          <h3 class="animated fadeInDown">Specialize</h3> 
+          <p class="animated fadeInUp">Success depends on work</p> 
         </div>
-       <!--  <div class="col-md-2 col-sm-3">
-          <a href="#" class="btn btn-primary">Read More</a>
-        </div> -->
+      </li>
+    </ul>
+  </div>
+</section> 
+
+<section id="call-to-action-2" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-sm-9">
+        <h3 class="section-title mb-4">Partner with Business Leaders</h3>
+        <p class="lead text-muted">Development of successful, long term, strategic relationships between customers and suppliers, based on achieving best practice and sustainable competitive advantage. In the business partner model, HR professionals work closely with business leaders and line managers to achieve shared organisational objectives.</p>
       </div>
     </div>
-  </section>
-  
-  <section id="content">
-  
-  
+  </div>
+</section>
+
+<section id="content" class="py-5">
   <div class="container">
-        <div class="row">
+    <div class="row">
       <div class="col-md-12">
-        <div class="aligncenter"><h2 class="aligncenter">Company</h2><!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus ovident, doloribus omnis minus temporibus perferendis nesciunt.. --></div>
-        <br/>
+        <h2 class="text-center section-title mb-5">Featured Companies</h2>
       </div>
     </div>
 
@@ -54,51 +43,48 @@
       $mydb->setQuery($sql);
       $comp = $mydb->loadResultList();
 
-
-      foreach ($comp as $company ) {
-        # code...
-    
+      foreach ($comp as $company) {
     ?>
-            <div class="col-sm-4 info-blocks">
-                <i class="icon-info-blocks fa fa-building-o"></i>
-                <div class="info-blocks-in">
-                    <h3><?php echo $company->COMPANYNAME;?></h3>
-                    <!-- <p><?php echo $company->COMPANYMISSION;?></p> -->
-                    <p>Address :<?php echo $company->COMPANYADDRESS;?></p>
-                    <p>Contact No. :<?php echo $company->COMPANYCONTACTNO;?></p>
-                </div>
-            </div>
-
-    <?php } ?> 
-  </div>
-  </section>
-  
-  <section class="section-padding gray-bg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-title text-center">
-            <h2 >Popular Jobs</h2>  
+      <div class="col-sm-4 info-blocks mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="icon-info-blocks fa fa-building-o fa-3x mb-3"></i>
+            <h4 class="card-title"><?php echo $company->COMPANYNAME;?></h4>
+            <p class="card-text">
+              <strong>Address:</strong> <?php echo $company->COMPANYADDRESS;?><br>
+              <strong>Contact:</strong> <?php echo $company->COMPANYCONTACTNO;?>
+            </p>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12 ">
+    <?php } ?> 
+  </div>
+</section>
+
+<section class="section-padding bg-light py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center section-title mb-5">Popular Job Categories</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="category-grid">
           <?php 
             $sql = "SELECT * FROM `tblcategory`";
             $mydb->setQuery($sql);
             $cur = $mydb->loadResultList();
 
             foreach ($cur as $result) {
-              echo '<div class="col-md-3" style="font-size:15px;padding:5px">* <a href="'.web_root.'index.php?q=category&search='.$result->CATEGORY.'">'.$result->CATEGORY.'</a></div>';
+              echo '<div class="category-item"><a href="'.web_root.'index.php?q=category&search='.$result->CATEGORY.'" class="btn btn-outline-primary m-2">'.$result->CATEGORY.'</a></div>';
             }
-
           ?>
         </div>
       </div>
- 
     </div>
-  </section>    
+  </div>
+</section>    
   <section id="content-3-10" class="content-block data-section nopad content-3-10">
   <div class="image-container col-sm-6 col-xs-12 pull-left">
     <div class="background-image-holder">
@@ -233,3 +219,64 @@
             </div>
             
           </div>
+
+<style>
+.section-title {
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.section-title:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #007bff;
+  margin: 15px auto;
+}
+
+.flex-caption {
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.flex-caption h3 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.info-blocks .card {
+  transition: transform 0.2s;
+}
+
+.info-blocks .card:hover {
+  transform: translateY(-5px);
+}
+
+.animated {
+  animation-duration: 1s;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeInDown { animation-name: fadeInDown; }
+.fadeInUp { animation-name: fadeInUp; }
+</style>
